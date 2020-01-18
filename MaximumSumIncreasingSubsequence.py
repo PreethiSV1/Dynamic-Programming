@@ -1,4 +1,6 @@
-def MaximumSumIncreasingSubsequenceLength(X, m):
+# Function to find maximum sum of increasing subsequence in an array
+# eg: [8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11] => 34 ==> [8, 12, 14]
+def MaximumSumIncreasingSubsequence(X, m):
     sumDp = [0 for _ in range(m)]
 
     # to store (maximum sum increasing) subsequence till each i-th index
@@ -27,6 +29,6 @@ def MaximumSumIncreasingSubsequenceLength(X, m):
 
 X = [8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11]
 m = len(X)
-maxSum, maxSequence = MaximumSumIncreasingSubsequenceLength(X, m)
+maxSum, maxSequence = MaximumSumIncreasingSubsequence(X, m)
 print(maxSum)
 print(maxSequence)

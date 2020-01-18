@@ -1,3 +1,5 @@
+# Function to find longest bitonic subsequence length (need not be continuous)
+# bitonic ---> Increases and then decreases eg: 1 4 7 10 6 3 (1 < 4 < 7 < 10 > 6 > 3)
 def LongestBitonicSubsequenceLength(X, m):
     LIS = [0 for _ in range(m)]
     LDS = [0 for _ in range(m)]
@@ -24,7 +26,7 @@ def LongestBitonicSubsequenceLength(X, m):
 
     return longestBSLength
 
-
+# Function to print longest bitonic subsequence
 def LongestBitonicSubsequence(X, m):
     LIS = [[] for _ in range(m)]
     LDS = [[] for _ in range(m)]

@@ -1,5 +1,8 @@
+# Function to find the length of shortest string (supersequence)
+# that contains both X and Y as subsequences
+# Eg: 'diet', 'meet' => 'dimeet' ==> 6
 def ShortestCommonSupersequenceLength(X, m, Y, n):
-    dp = [[0 for i in range(n+1)] for j in range(m+1)]
+    dp = [[0 for i in range(n + 1)] for j in range(m + 1)]
     for i in range(m + 1):
         dp[i][0] = i
     for j in range(n + 1):

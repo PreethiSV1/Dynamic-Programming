@@ -1,3 +1,5 @@
+# Initially find LCS of both the strings X and Y, then find if
+# the other characters in the string are deleted from X or inserted into Y
 def LongestCommonSubsequenceLength(X, m, Y, n):
     dp = [[0 for i in range(n + 1)] for j in range(m + 1)]
     for i in range(1, m + 1):
@@ -9,6 +11,7 @@ def LongestCommonSubsequenceLength(X, m, Y, n):
     return dp
 
 
+# To output the differences with '+' or '-' symbol for the differences between X and Y
 def DiffUtility(X, m, Y, n):
     # Character present both in X and Y
     if m > 0 and n > 0 and X[m - 1] == Y[n - 1]:

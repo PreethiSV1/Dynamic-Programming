@@ -1,3 +1,5 @@
+# Function to find Longest Common Subsequence Length
+# eg: ABCDEF, BGDAE ==> 3
 def LongestCommonSubsequenceLength(X, m, Y, n):
     dp = [[0 for i in range(n + 1)] for j in range(m + 1)]
     for i in range(1, m + 1):

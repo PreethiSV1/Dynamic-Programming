@@ -1,4 +1,6 @@
-def LongestCommonsubstring(X, m, Y, n):
+# Function to find Longest Common Substring
+# eg: ABCDEF, GBCDAE ==> BCD
+def LongestCommonSubstring(X, m, Y, n):
     maxLength = 0
     endingIndex = 0
 
@@ -15,6 +17,6 @@ def LongestCommonsubstring(X, m, Y, n):
     return X[endingIndex - maxLength:endingIndex]
 
 
-X = 'Preethi'
-Y = 'reeth'
-print(LongestCommonsubstring(X, len(X), Y, len(Y)))
+X = 'ABCDEF'
+Y = 'GBCDAE'
+print(LongestCommonSubstring(X, len(X), Y, len(Y)))

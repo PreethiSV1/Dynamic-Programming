@@ -1,3 +1,5 @@
+# Function to find the length of shortest string (supersequence)
+# that contains both X and Y as subsequences and store in dp
 def ShortestCommonSupersequenceLength(X, m, Y, n):
     dp = [[0 for i in range(n+1)] for j in range(m+1)]
 
@@ -15,6 +17,10 @@ def ShortestCommonSupersequenceLength(X, m, Y, n):
                 dp[i][j] = min(dp[i - 1][j] + 1, dp[i][j - 1] + 1) # shortest => minimum
     return dp
 
+
+# Function to print the shortest string (supersequence)
+# that contains both X and Y as subsequences
+# Eg: 'diet', 'meet' => 'dimeet'
 def ShortestCommonSupersequence(X, m, Y, n):
 
     if m == 0: # if we have reached the end of first string
@@ -32,8 +38,8 @@ def ShortestCommonSupersequence(X, m, Y, n):
     return ShortestCommonSupersequence(X, m - 1, Y, n) + X[m - 1]
 
 
-X = "ABCBDAB"
-Y = "BDCABA"
+X = "meet"
+Y = "diet"
 m, n = len(X), len(Y)
 dp = ShortestCommonSupersequenceLength(X, m, Y, n)
 print(ShortestCommonSupersequence(X, m, Y, n))

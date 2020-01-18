@@ -1,3 +1,4 @@
+# Function to simply find the length of LIS without using LCS
 def LongestIncreasingSubsequenceLength(X, m):
     dp = [0 for i in range(m)]
 
@@ -8,8 +9,10 @@ def LongestIncreasingSubsequenceLength(X, m):
         dp[i] = 1
         for j in range(i):
             if X[i] > X[j] and dp[i] < dp[j]:
+                # If current number is greater than the previous,
+                # copy the previous number's LIS value
                 dp[i] = dp[j]
-        # include i in the sequence
+        # include i-th value in the sequence length
         dp[i] += 1
     return max(dp)
 
