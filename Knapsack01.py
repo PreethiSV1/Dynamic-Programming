@@ -4,10 +4,10 @@ def Knapsack(value, weight, n, capacity):
         for w in range(capacity + 1):
             if i == 0 or w == 0:
                 dp[i][w] = 0
-            elif weights[i - 1] <= capacity:
+            elif weights[i - 1] <= w:
                 # if that weight can be put inside the knapsack
                 # maximum among the profits of including and excluding the current weight
-                dp[i][w] = max(value[i - 1] + dp[i - 1][capacity - weight[i - 1]],  dp[i - 1][capacity])
+                dp[i][w] = max(value[i - 1] + dp[i - 1][w - weight[i - 1]],  dp[i - 1][w])
             else:
                 dp[i][w] = dp[i - 1][w]
     return dp[n][capacity]
