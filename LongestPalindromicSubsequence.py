@@ -1,3 +1,22 @@
+# Find length directly
+def LongestPalindromicSubsequenceLength(X):
+    n = len(X)
+    dp = [[0 for _ in range(n)] for _ in range(n)]
+    for i in range(n):
+        dp[i][i] = 1
+    for length in range(2, n + 1):
+        for i in range(n - length + 1):
+            j = i + length - 1
+            if X[i] == X[j] and j == i + 1:
+                dp[i][j] = 2
+            elif X[i] == X[j]:
+                dp[i][j] = dp[i + 1][j - 1] + 2
+            else:
+                dp[i][j] = max(dp[i][j - 1], dp[i + 1][j])
+
+    return dp[0][n - 1]
+
+
 # Function to find Longest Palindromic sequence using LCS with
 # String X and String Y = reverse of X
 def LongestPalindromicSubsequence(X):
@@ -35,7 +54,6 @@ def LongestCommonSubsequence(X, m, Y, n, dp):
     return LongestCommonSubsequence(X, m, Y, n - 1, dp)
 
 
-X = "ABBDCACB"
+X = "abacdfgdcaba"
+print(LongestPalindromicSubsequenceLength(X))
 print(LongestPalindromicSubsequence(X))
-
-

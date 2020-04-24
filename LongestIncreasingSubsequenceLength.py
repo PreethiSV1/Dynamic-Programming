@@ -1,6 +1,6 @@
 # Function to simply find the length of LIS without using LCS
 def LongestIncreasingSubsequenceLength(X, m):
-    dp = [0 for i in range(m)]
+    dp = [0 for _ in range(m)]
 
     # starting with index 0 => LIS length = 1
     dp[0] = 1

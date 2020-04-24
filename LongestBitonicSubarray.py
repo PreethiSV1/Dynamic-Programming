@@ -1,5 +1,7 @@
 # Function to find longest bitonic subarray (continuous numbers --> subarray)
 # bitonic ---> Increases and then decreases eg: 1 4 7 10 6 3 (1 < 4 < 7 < 10 > 6 > 3)
+
+
 def LongestBitonicSubarray(X, m):
     LIS = [0 for _ in range(m)]
     LDS = [0 for _ in range(m)]
