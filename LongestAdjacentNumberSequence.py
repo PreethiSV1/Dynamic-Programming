@@ -1,5 +1,7 @@
 # Function to find the longest sequence of consecutive numbers in any (<-, ->, ^, v️) direction
 # in a matrix (n x n) with no duplicates
+# Time complexity - O(n^2) only since dp values are calculated only once each
+
 def LongestAdjacentNumberSequence(X, n, i, j, dp):
     if i > n or i < 0 or j > n or j < 0:  # exit conditions
         return ''
@@ -34,12 +36,12 @@ def LongestAdjacentNumberSequence(X, n, i, j, dp):
 X = [
     [10, 13, 14, 21, 23],
     [11, 9, 22, 2, 3],
-    [12, 8, 1, 5, 4],
-    [15, 24, 7, 6, 20],
+    [12, 24, 1, 5, 4],
+    [15, 8, 7, 6, 20],
     [16, 17, 18, 19, 25]
 ]
 n = len(X)
-dp = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+dp = [[0 for _ in range(n)] for _ in range(n)]
 resultSize = 0
 result = ''
 for i in range(n):

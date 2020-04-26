@@ -15,7 +15,7 @@ def Knapsack(value, weight, n, capacity):
 
 def contribution(weights, capacity):
     for i in range(n, 0, -1):
-        if capacity < 0:
+        if capacity <= 0:
             break
         if dp[i][capacity] == dp[i - 1][capacity]:  # this item does not contribute to result
             continue

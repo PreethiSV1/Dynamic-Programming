@@ -1,7 +1,9 @@
 # Function to find the most efficient way to multiply given sequence of matrices
 import sys
-def MatrixChainOrderingCost(dimensions):
-    n = len(dimensions)
+
+
+def MatrixChainOrderingCost(value):
+    n = len(value)
 
     dp = [[0 for _ in range(n)] for _ in range(n)]
     # dp[i,j] = minimum number of scalar multiplications (i.e., cost)
@@ -16,7 +18,7 @@ def MatrixChainOrderingCost(dimensions):
             for k in range(start, end):
                 # split and find for M[start..k] and M[k..end] and add them with the cost
                 cost = dp[start][k] + dp[k + 1][end] + \
-                       dimensions[start - 1] * dimensions[k] * dimensions[end]
+                       value[start - 1] * value[k] * value[end]
                 if cost < dp[start][end]:
                     dp[start][end] = cost
     return dp[1][n - 1]

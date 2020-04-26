@@ -1,5 +1,7 @@
 # Function to return the count of paths with given cost
 # to reach cell at (i,j) in the matrix X from first cell
+
+
 def CountPathsWithGivenCost(X, i, j, cost, dp):
     if cost < 0:
         return 0
@@ -35,4 +37,4 @@ X = [
 m = len(X)
 n = len(X[0])
 dp = {}
-print(CountPathsWithGivenCost(X, m - 1, n - 1, 25, dp))
+print(CountPathsWithGivenCost(X, m - 1, n - 1, 24, dp))

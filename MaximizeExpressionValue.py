@@ -1,5 +1,7 @@
 # Function to find maximum value of the expression
 # (X[s] - X[r] + X[q] - X[p]) where s > r > q > p
+
+
 def MaximizeExpressionValue(X, n):
     L1 = [-9999999 for _ in range(n + 1)]
     L2 = [-9999999 for _ in range(n)]

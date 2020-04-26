@@ -1,5 +1,7 @@
 # Function to find maximum sum of increasing subsequence in an array
 # eg: [8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11] => 34 ==> [8, 12, 14]
+
+
 def MaximumSumIncreasingSubsequence(X, m):
     sumDp = [0 for _ in range(m)]
 
@@ -19,12 +21,12 @@ def MaximumSumIncreasingSubsequence(X, m):
         sumDp[i] += X[i]
         MSIS[i].append(X[i])
 
-    maxSum = 0
+    maximumSum = 0
     for i in range(1, m):
-        if sumDp[i] > sumDp[maxSum]:
-            maxSum = i
+        if sumDp[i] > sumDp[maximumSum]:
+            maximumSum = i
 
-    return sumDp[maxSum], MSIS[maxSum]
+    return sumDp[maximumSum], MSIS[maximumSum]
 
 
 X = [8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11]

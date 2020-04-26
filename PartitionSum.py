@@ -1,6 +1,8 @@
 # Modification of Subset sum problem
 # Partition problem - Return true if given array arr[0..n-1] can
 # be divided into two subsets with equal sum
+
+
 def PartitionSum(arr):
     total = sum(arr)
     return (not (total % 2)) and SubsetSum(arr, len(arr), total // 2)
