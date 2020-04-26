@@ -2,15 +2,15 @@
 
 ### Problems Solved:
 
-Longest Common Subsequence | LCS Length <br>
-Longest Common Subsequence | Finding LCS <br>
+Longest Common Subsequence <br>
 Longest Common Substring problem <br>
 Longest Palindromic Subsequence <br>
+Longest Palindromic Substring <br>
 Longest Repeated Subsequence <br>
 Implement Diff Utility <br>
-Shortest Common Supersequence | SCS Length <br>
-Shortest Common Supersequence | Finding SCS <br>
+Shortest Common Supersequence <br>
 Longest Increasing Subsequence <br>
+Longest Increasing Subarray <br>
 Longest Bitonic Subsequence <br>
 Increasing Subsequence with Maximum Sum <br>
 The Levenshtein distance (Edit distance) problem <br>
@@ -23,3 +23,10 @@ Count number of paths in a matrix with given cost to reach destination cell <br>
 Maximize the Value of an Expression <br>
 Partition problem <br>
 Subset Sum Problem <br>
+Minimum Sum Partition Problem <br>
+Find all N-digit binary strings without any consecutive 1’s <br>
+Rod Cutting Problem <br>
+Maximum Product Rod Cutting <br>
+Coin change-making problem (unlimited supply of coins) <br>
+Coin Change Problem (Total number of ways to get the denomination of coins) <br>
+Longest Alternating Subsequence Problem <br>
